@@ -1,0 +1,221 @@
+/* Estilos comunes para navegadores que soportan CSS Grid */
+@supports (display: grid) {
+  .page-wrapper {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      min-height: 100vh;
+  }
+
+  /* Estilos específicos para el encabezado */
+  .header {
+      grid-row: 1;
+      background-color: #2e86de; /* Azul */
+      color: #fff; /* Texto blanco */
+      padding: 20px 0;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+  }
+
+  .header .container {
+      width: 90%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+  }
+
+  .header .logo img {
+      width: 100px;
+      height: auto;
+  }
+
+  .header .nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: right;
+  }
+
+  .header .nav ul li {
+      display: inline-block;
+      margin-left: 20px;
+  }
+
+  .header .nav ul li:first-child {
+      margin-left: 0;
+  }
+
+  .header .nav ul li a {
+      text-decoration: none;
+      color: #fff;
+  }
+
+  /* Estilos específicos para el pie de página */
+.footer {
+  background-color: #2e86de;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer .container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .logo img {
+  flex: 1;
+  width: 80px; /* Cambia este valor según el tamaño deseado */
+  height: auto;
+}
+
+.footer .nav {
+  flex: 2;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer .nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .nav ul li {
+  display: inline;
+}
+
+.footer .nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 10px;
+}
+
+.footer .social-media {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer .social-media a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.footer .social-media img {
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+}
+
+
+/* Estilos para navegadores que no soportan CSS Grid */
+@supports not (display: grid) {
+  .header,
+  .footer {
+      background-color: #2e86de;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+  }
+
+  .header .logo img {
+      width: 100px;
+      height: auto;
+  }
+
+  .header .nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  }
+
+  .header .nav ul li {
+      display: inline-block;
+      margin-left: 20px;
+  }
+
+  .header .nav ul li:first-child {
+      margin-left: 0;
+  }
+
+  .header .nav ul li a {
+      text-decoration: none;
+      color: #fff;
+  }
+
+  .footer .social-media img {
+      width: 30px;
+      height: auto;
+      margin-left: 10px;
+  }
+}
+
+/* Otros estilos */
+/* Resto de tus estilos aquí */
+
+/* Estilos para la retícula de participantes */
+.participants-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.participant {
+  width: 300px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.participant img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.participant h2 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.participant p {
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+/* Resto de tus estilos aquí */
+.background {
+  background-image: url('../../background-image.jpg'); /* Ruta de tu imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.welcome-text {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mejorar la legibilidad */
+}
+
+@media screen and (max-width: 768px) {
+  .welcome-text {
+    font-size: 1.5rem;
+  }
+}
+}
